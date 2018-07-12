@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Test project{% endblock %}
+{% block head %}
+{% endblock %}
+{% block body %}
+<div class="container">
+  <div class="left_box">
+  </div><!-- end left_box-->
+  <div class="right_box">
+	<p id="ws_box"></p>
+  </div><!-- end right_box-->
+  <div class="bottom_box">
+  </div><!-- end bottom_box-->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js" integrity="sha256-jniDwC1PC9OmGoyPxA9VpGvgwDYyxsMqu5Q4OrF5wNY=" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='profits.js') }}"></script>
+{% endblock %}
