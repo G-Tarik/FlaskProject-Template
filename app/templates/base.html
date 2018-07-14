@@ -2,19 +2,12 @@
 <html lang="en">
   <head>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
-    {% block head %}{% endblock %}
+    <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+    {% block head %}
+    {% endblock %}
   </head>
   <body>
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="/">Home</a></li>
-            <li role="presentation"><a href="/about">About</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div class="header">
     {% with messages = get_flashed_messages() %}
       {% if messages %}
         <div class=flashes>
@@ -24,11 +17,18 @@
         </div>
       {% endif %}
     {% endwith %}
+    </div><!-- end header -->
+
+    <div class="container">
       {% block body %}
       {% endblock %}
-      <footer class="footer">
+    </div> <!-- end container -->
+
+    <div class="footer">
+      {% block footer %}
         <p>© 2100 Moonlight</p>
-      </footer>
-    </div> <!-- /container -->
+      {% endblock %}
+    </div><!-- end footer -->
+
   </body>
 </html>
