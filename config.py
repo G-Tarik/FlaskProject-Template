@@ -1,4 +1,9 @@
-DEBUG = True
-SEND_FILE_MAX_AGE_DEFAULT = 0
-SECRET_KEY = '=\x10\xeb\xa5\xb0\xdb\x8b\xa0\xd3\xe9\x8d\x1a\xef\xba^\x1bs/\xb8\xce\xab\x84|\xc0'
+class Config(object):
+    DEBUG = False
+    TESTING = False
+    HOST = '0.0.0.0'
+    PORT = 5000
 
+class DevConfig(Config):
+    DEBUG = True
+    SEND_FILE_MAX_AGE_DEFAULT = 0 
