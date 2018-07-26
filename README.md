@@ -1,2 +1,4 @@
-# FlaskProject1
-experimenting here
+# FlaskProject Template
+
+- blueprints
+- websockets
